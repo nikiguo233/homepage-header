@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage Sticky Header</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scroll-header.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="global-nav" aria-label="Main navigation">
+        <div class="global-nav__brand">
+          <span class="global-nav__logo" aria-hidden="true"></span>
+          <span class="global-nav__product">Zuora</span>
+        </div>
+
+        <nav class="global-nav__section" aria-label="Primary">
+          <p class="global-nav__section-label">Workspace</p>
+          <ul class="global-nav__list">
+            <li>
+              <a class="global-nav__link global-nav__link--active" href="#" aria-current="page">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <path d="M9 22V12h6v10" />
+                </svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                Customers
+              </a>
+            </li>
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <path d="M7 8h4M7 12h10M7 16h6" />
+                </svg>
+                Subscriptions
+              </a>
+            </li>
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                </svg>
+                Billing
+              </a>
+            </li>
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 19h16M7 16l3-12 4 9 2-6 3 9" />
+                </svg>
+                Usage &amp; Rating
+              </a>
+            </li>
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                </svg>
+                Reports
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="global-nav__section global-nav__section--footer" aria-label="Settings">
+          <ul class="global-nav__list">
+            <li>
+              <a class="global-nav__link" href="#">
+                <svg class="global-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="main-area">
+        <div class="page">
+          <header class="sticky-header" aria-label="Homepage toolbar" data-compact="false">
+            <div class="sticky-header__inner">
+              <h1 class="sticky-header__title">Welcome to Zuora, Rachel Carter</h1>
+
+              <div class="sticky-header__endcap">
+                <div class="search-shell">
+                  <div class="search-field" role="search">
+                    <span class="search-field__icon-slot" aria-hidden="true">
+                      <img
+                        class="search-field__icon"
+                        src="assets/search-icon.svg"
+                        alt=""
+                      />
+                    </span>
+                    <label for="zuora-search" class="visually-hidden">Search in Zuora</label>
+                    <input
+                      id="zuora-search"
+                      class="search-field__input"
+                      type="search"
+                      name="q"
+                      placeholder="Search in Zuora"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+
+                <div class="sticky-header__icon-group">
+                  <button type="button" class="icon-btn icon-btn--ghost" aria-label="Configure homepage">
+                    <img
+                      class="icon-btn__glyph"
+                      src="assets/configure-homepage.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </button>
+                  <button type="button" class="icon-btn icon-btn--solid" aria-label="Add">
+                    <img class="icon-btn__glyph" src="assets/add-icon.svg" alt="" width="14" height="14" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <main class="demo-main">
+            <div class="widget-grid" aria-label="Dashboard widgets">
+              <!-- Revenue Overview -->
+              <article class="widget-card">
+                <header class="widget-card__head">
+                  <div class="widget-card__head-row">
+                    <h2 class="widget-card__title">Revenue Overview</h2>
+                    <button type="button" class="widget-btn widget-btn--ghost">
+                      Refresh <span class="widget-btn__chev" aria-hidden="true">▾</span>
+                    </button>
+                  </div>
+                  <p class="widget-card__meta">Last refreshed at 01/01/2026, 6:31 PM PST</p>
+                </header>
+                <div class="widget-filters">
+                  <span class="widget-chip">Duration: Last Month</span>
+                  <span class="widget-chip widget-chip--dismiss">Location: All <button type="button" aria-label="Remove">×</button></span>
+                  <button type="button" class="widget-link">+ Add Filter</button>
+                </div>
+                <div class="widget-overview">
+                  <div class="widget-donut-wrap">
+                    <div class="widget-donut" role="img" aria-label="Revenue by region"></div>
+                    <div class="widget-donut-center">
+                      <span class="widget-donut-total">$12.4K</span>
+                      <span class="widget-donut-label">Total</span>
+                      <span class="widget-donut-delta">↑ 10%</span>
+                    </div>
+                  </div>
+                  <ul class="widget-legend">
+                    <li><span class="widget-dot widget-dot--us"></span> US</li>
+                    <li><span class="widget-dot widget-dot--emea"></span> EMEA</li>
+                    <li><span class="widget-dot widget-dot--apac"></span> APAC</li>
+                    <li><span class="widget-dot widget-dot--latam"></span> LATAM</li>
+                    <li><span class="widget-dot widget-dot--other"></span> Others</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Revenue Tasks -->
+              <article class="widget-card">
+                <header class="widget-card__head">
+                  <div class="widget-card__head-row">
+                    <h2 class="widget-card__title">Revenue Tasks</h2>
+                    <button type="button" class="widget-btn widget-btn--ghost">Refresh</button>
+                  </div>
+                  <p class="widget-card__meta">Last refreshed at 01/01/2026, 6:31 PM PST</p>
+                </header>
+                <div class="widget-toolbar">
+                  <div class="widget-tabs" role="tablist">
+                    <button type="button" class="widget-tab widget-tab--active" role="tab" aria-selected="true">Exceptions</button>
+                    <button type="button" class="widget-tab" role="tab">Actions</button>
+                  </div>
+                  <label class="widget-toggle">
+                    <input type="checkbox" checked />
+                    <span class="widget-toggle__ui"></span>
+                    <span>Pending Data Only</span>
+                  </label>
+                </div>
+                <ul class="widget-task-list">
+                  <li><span class="widget-task-dot"></span> SSP Exceptions <span class="widget-info">ⓘ</span> <strong>32</strong></li>
+                  <li><span class="widget-task-dot"></span> Auto POBs <span class="widget-info">ⓘ</span> <strong>18</strong></li>
+                  <li><span class="widget-task-dot"></span> Orphan Transactions <span class="widget-info">ⓘ</span> <strong>10</strong></li>
+                  <li><span class="widget-task-dot"></span> Inbound Transactions Exceptions <span class="widget-info">ⓘ</span> <strong>5</strong></li>
+                </ul>
+              </article>
+
+              <!-- Zuora Revenue Report -->
+              <article class="widget-card">
+                <header class="widget-card__head widget-card__head--simple">
+                  <h2 class="widget-card__title">Zuora Revenue Report</h2>
+                </header>
+                <div class="widget-controls">
+                  <div class="widget-field">
+                    <span class="widget-field__icon" aria-hidden="true">🔍</span>
+                    <input type="search" class="widget-input" placeholder="Search Report" />
+                  </div>
+                  <select class="widget-select" aria-label="Layout">
+                    <option>Select Layout</option>
+                    <option>Standard</option>
+                    <option>Summary</option>
+                  </select>
+                  <button type="button" class="widget-btn widget-btn--primary" disabled>Submit</button>
+                </div>
+                <section class="widget-subsection">
+                  <div class="widget-subsection__head">
+                    <h3 class="widget-subsection__title">Recent Downloads</h3>
+                    <button type="button" class="widget-icon-btn" aria-label="Refresh list">↻</button>
+                  </div>
+                  <div class="widget-table-wrap">
+                    <table class="widget-table">
+                      <thead>
+                        <tr>
+                          <th>Report ID</th>
+                          <th>Report Name</th>
+                          <th>Completion Time</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1000001</td>
+                          <td>Revenue Insights</td>
+                          <td>2026/02/19 22:13</td>
+                          <td><button type="button" class="widget-icon-btn" aria-label="Download">⬇</button></td>
+                        </tr>
+                        <tr>
+                          <td>1000002</td>
+                          <td>Deferred Revenue</td>
+                          <td>2026/02/19 21:02</td>
+                          <td><button type="button" class="widget-icon-btn" aria-label="Download">⬇</button></td>
+                        </tr>
+                        <tr>
+                          <td>1000003</td>
+                          <td>ARR Waterfall</td>
+                          <td>2026/02/18 18:45</td>
+                          <td><button type="button" class="widget-icon-btn" aria-label="Download">⬇</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <a href="#" class="widget-footer-link">View All Downloads</a>
+                </section>
+              </article>
+
+              <!-- Zuora Revenue Program -->
+              <article class="widget-card">
+                <header class="widget-card__head widget-card__head--simple">
+                  <h2 class="widget-card__title">Zuora Revenue Program</h2>
+                </header>
+                <div class="widget-controls">
+                  <div class="widget-field">
+                    <span class="widget-field__icon" aria-hidden="true">🔍</span>
+                    <input type="search" class="widget-input" placeholder="Search Program" />
+                  </div>
+                  <label class="widget-check"><input type="checkbox" /> Job Group</label>
+                  <button type="button" class="widget-btn widget-btn--solid">Run Program</button>
+                </div>
+                <section class="widget-subsection">
+                  <div class="widget-subsection__head">
+                    <h3 class="widget-subsection__title">Recent Schedule Jobs</h3>
+                    <button type="button" class="widget-icon-btn" aria-label="Refresh list">↻</button>
+                  </div>
+                  <div class="widget-table-wrap">
+                    <table class="widget-table">
+                      <thead>
+                        <tr>
+                          <th>Job ID</th>
+                          <th>Job Name</th>
+                          <th>Completion Time</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1000001</td>
+                          <td>Data Sync</td>
+                          <td>2026/02/19 22:13</td>
+                          <td><span class="widget-badge widget-badge--ok">COMPLETED</span></td>
+                        </tr>
+                        <tr>
+                          <td>1000002</td>
+                          <td>Nightly Rollup</td>
+                          <td>2026/02/19 20:01</td>
+                          <td><span class="widget-badge widget-badge--err">ERROR</span></td>
+                        </tr>
+                        <tr>
+                          <td>1000003</td>
+                          <td>Validation Run</td>
+                          <td>2026/02/18 14:22</td>
+                          <td><span class="widget-badge widget-badge--warn">WARNING</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <a href="#" class="widget-footer-link">View All Schedule Jobs</a>
+                </section>
+              </article>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- Figma code-to-capture: loads when using generate_figma_design / localhost capture -->
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  </body>
+</html>
