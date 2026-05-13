@@ -29,13 +29,7 @@
   function applyLayout(p) {
     header.style.setProperty("--scroll-progress", String(p));
     var compactStr = p >= COMPACT_AT ? "true" : "false";
-    var compactToggled =
-      lastCompactStr !== null && lastCompactStr !== compactStr && !prefersReducedMotion();
-
-    if (compactToggled) {
-      /* Apply new layout before measuring / starting animation — avoids one frame with the old
-         placement (absolute hero vs in-flow compact) while the rehome keyframes run. */
-      header.dataset.compact = compactStr;
+    if (lastCompactStr !== null && lastCompactStr !== compactStr && !prefersReducedMotion()) {
       header.dataset.iconRehome = compactStr === "true" ? "to-compact" : "to-hero";
       header.classList.remove("sticky-header--icons-rehome");
       void header.offsetWidth;
@@ -45,11 +39,9 @@
         header.classList.remove("sticky-header--icons-rehome");
         delete header.dataset.iconRehome;
       }, 480);
-    } else {
-      header.dataset.compact = compactStr;
     }
-
     lastCompactStr = compactStr;
+    header.dataset.compact = compactStr;
   }
 
   function frame() {

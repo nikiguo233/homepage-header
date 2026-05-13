@@ -1,1 +1,1 @@
-{"root":["./vite.config.ts"],"version":"5.9.3"}
+{"root":["./vite.config.ts","./src/main.ts","./src/sticky-header-scroll.ts","./src/vite-env.d.ts"],"version":"5.9.3"}
