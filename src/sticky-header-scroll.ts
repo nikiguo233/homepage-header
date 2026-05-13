@@ -18,8 +18,20 @@ export function initStickyHeaderScroll(): void {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
+  /** Scroll distance that drives the header — window and any overflow ancestors (embeds / Figma often scroll a div, not the document). */
+  function scrollDepth(): number {
+    let y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    for (let n = header.parentElement; n; n = n.parentElement) {
+      const { overflowY } = window.getComputedStyle(n);
+      if (/^(auto|scroll|overlay)$/.test(overflowY) && n.scrollHeight > n.clientHeight + 1) {
+        y = Math.max(y, n.scrollTop);
+      }
+    }
+    return y;
+  }
+
   function targetProgress(): number {
-    const y = window.scrollY || window.pageYOffset;
+    const y = scrollDepth();
     if (prefersReducedMotion()) {
       return y > 24 ? 1 : 0;
     }
@@ -71,7 +83,8 @@ export function initStickyHeaderScroll(): void {
     }
   }
 
-  window.addEventListener("scroll", kick, { passive: true });
+  /* capture: scroll does not bubble; nested scrollports still dispatch through capture on window */
+  window.addEventListener("scroll", kick, { passive: true, capture: true });
   window.addEventListener("resize", kick, { passive: true });
 
   smoothP = targetProgress();
