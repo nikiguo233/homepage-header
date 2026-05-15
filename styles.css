@@ -513,6 +513,19 @@ body {
   outline-offset: 2px;
 }
 
+/* React / MUI FloatingButton mount — replaces legacy .icon-btn--solid Add control */
+.sticky-header__fab-mount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.sticky-header__fab-mount .MuiFab-root {
+  box-sizing: border-box;
+}
+
 .icon-btn {
   display: inline-flex;
   align-items: center;
