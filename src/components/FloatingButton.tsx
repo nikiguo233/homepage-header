@@ -101,6 +101,17 @@ function fabSx({
         "&:active:not(.Mui-disabled)": {
           bgcolor: `color-mix(in srgb, var(--occam-light-theme-contained-default-pressed-on-layer) 20%, var(--occam-light-theme-contained-default-pressed-base))`,
         },
+        "&:focus-visible": {
+          outline: "none",
+          bgcolor: "transparent",
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(var(--occam-light-theme-contained-default-enabled), var(--occam-light-theme-contained-default-enabled))`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          borderColor: "var(--occam-light-theme-links-enabled)",
+          borderWidth: 2,
+          borderStyle: "solid",
+          boxShadow: "var(--shadow-fab-focus, var(--occam-elevation-2dp))",
+        },
         "&.Mui-disabled": {
           bgcolor: "var(--occam-floating-button-disabled-bg-light)",
           color: "var(--occam-floating-button-disabled-fg-light)",
@@ -116,6 +127,17 @@ function fabSx({
         },
         "&:active:not(.Mui-disabled)": {
           bgcolor: `color-mix(in srgb, var(--occam-dark-theme-contained-default-hover-on-layer) 20%, var(--occam-dark-theme-contained-default-hover-base))`,
+        },
+        "&:focus-visible": {
+          outline: "none",
+          bgcolor: "transparent",
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(var(--occam-core-palette-brand-blue-400), var(--occam-core-palette-brand-blue-400))`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          borderColor: "var(--occam-dark-theme-links-enabled)",
+          borderWidth: 2,
+          borderStyle: "solid",
+          boxShadow: "var(--shadow-fab-focus, var(--occam-elevation-2dp))",
         },
         "&.Mui-disabled": {
           bgcolor: "var(--occam-floating-button-disabled-bg-dark)",
