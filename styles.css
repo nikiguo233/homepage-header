@@ -689,7 +689,7 @@ body {
   line-height: var(--zui-font-body-m-lh);
   letter-spacing: var(--zui-font-body-m-tracking);
   padding: 6px 12px;
-  border-radius: var(--widget-radius-inner);
+  border-radius: var(--zui-radius-default);
   border: 1px solid var(--color-border-default);
   background: var(--color-surface);
   color: var(--color-cool-gray-800);
@@ -738,7 +738,7 @@ body {
   line-height: var(--zui-font-tableheader-lh);
   letter-spacing: var(--zui-font-tableheader-tracking);
   padding: 4px 10px;
-  border-radius: var(--widget-radius-inner);
+  border-radius: var(--zui-radius-chip);
   background: rgba(53, 59, 63, 0.08);
   color: var(--color-cool-gray-800);
 }
